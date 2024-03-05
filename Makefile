@@ -12,8 +12,15 @@ PRN_DIR = ./others/printf
 MLX_FLAGS = -L$(MLX_DIR) -lmlx -framework OpenGL -framework AppKit
 INCLUDES = -I$(MLX_DIR) -I$(INC_DIR) -I$(GNL_DIR) -I$(PRN_DIR)
 
-SRC_FILES = main.c utils.c map.c refactor.c refactor2.c get_next_line.c get_next_line_utils.c sprite.c moves.c ft_printf.c ft_printf_utils.c ft_printf_hex.c enemy.c
-SRCS = $(addprefix $(SRC_DIR)/,main.c utils.c map.c sprite.c moves.c enemy.c refactor.c refactor2.c) $(addprefix $(GNL_DIR)/,get_next_line.c get_next_line_utils.c) $(addprefix $(PRN_DIR)/,ft_printf.c ft_printf_utils.c ft_printf_hex.c)
+SRC_FILES = main.c utils.c map.c sprite.c moves.c enemy.c \
+            refactor.c refactor2.c get_next_line.c get_next_line_utils.c \
+            ft_printf.c ft_printf_utils.c ft_printf_hex.c
+
+SRCS = $(addprefix $(SRC_DIR)/,main.c utils.c map.c sprite.c moves.c enemy.c \
+        refactor.c refactor2.c) \
+       $(addprefix $(GNL_DIR)/,get_next_line.c get_next_line_utils.c) \
+       $(addprefix $(PRN_DIR)/,ft_printf.c ft_printf_utils.c ft_printf_hex.c)
+
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 OBJS := $(OBJS:$(GNL_DIR)/%.c=$(OBJ_DIR)/%.o)
 OBJS := $(OBJS:$(PRN_DIR)/%.c=$(OBJ_DIR)/%.o)
