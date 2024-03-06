@@ -6,7 +6,7 @@
 /*   By: vgomes <vgomes@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 16:40:28 by vgomes            #+#    #+#             */
-/*   Updated: 2024/03/05 16:28:11 by vgomes           ###   ########.fr       */
+/*   Updated: 2024/03/06 18:19:14 by vgomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	update_game_state(t_game *game)
 	clock_t	current_time;
 
 	current_time = clock();
-	if ((current_time - game->last_enemy_move_time) > (CLOCKS_PER_SEC / 25))
+	if ((current_time - game->last_enemy_move_time) > (CLOCKS_PER_SEC / 20))
 	{
 		move_enemy(game);
 		game->last_enemy_move_time = current_time;
