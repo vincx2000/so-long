@@ -6,7 +6,7 @@
 /*   By: vgomes <vgomes@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:37:55 by vgomes            #+#    #+#             */
-/*   Updated: 2024/03/05 16:27:49 by vgomes           ###   ########.fr       */
+/*   Updated: 2024/04/11 17:28:17 by vgomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	handle_keypress(int keycode, t_game *game)
 {
-	if (keycode == KEY_ESCAPE) // Example: Close window on ESC
+	if (keycode == KEY_ESCAPE) 
 	{
 		mlx_destroy_window(game->mlx_ptr, game->win_ptr);
-		exit(EXIT_SUCCESS); // Or handle cleanup differently
+		exit(EXIT_SUCCESS); 
 	}
 	else if (keycode == KEY_W || keycode == KEY_UP)
 		move_player(game, 0, -1);

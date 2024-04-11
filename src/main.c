@@ -6,7 +6,7 @@
 /*   By: vgomes <vgomes@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:03:13 by vgomes            #+#    #+#             */
-/*   Updated: 2024/03/05 16:28:08 by vgomes           ###   ########.fr       */
+/*   Updated: 2024/04/11 17:29:18 by vgomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	setup_map(t_game *game, char *map_file)
 
 void	start_game(t_game *game)
 {
-	render_map(game); // Render the map to the window
+	render_map(game); 
 	mlx_loop_hook(game->mlx_ptr, (void *)update_game_state, game);
-	mlx_loop(game->mlx_ptr); // Starts the MLX event loop
+	mlx_loop(game->mlx_ptr); 
 }

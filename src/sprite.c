@@ -6,7 +6,7 @@
 /*   By: vgomes <vgomes@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 14:35:10 by vgomes            #+#    #+#             */
-/*   Updated: 2024/03/05 16:28:04 by vgomes           ###   ########.fr       */
+/*   Updated: 2024/04/11 17:28:34 by vgomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ void	load_sprites(t_game *game)
 			&img_width, &img_height);
 	game->enemy_sprite = mlx_xpm_file_to_image(game->mlx_ptr,
 			"include/enemy.xpm", &img_width, &img_height);
-	// Check if sprites are loaded successfully
 	if (!game->wall || !game->player || !game->collectibles || !game->exit)
 	{
 		ft_putstr_fd("Error loading sprites.\n", 2);
